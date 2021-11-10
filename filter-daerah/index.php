@@ -81,18 +81,6 @@
                         <option value=""></option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <label class="font-weight-bold">Kecamatan</label>
-                    <select class="form-control" name="kecamatan" id="kecamatan">
-                        <option value=""></option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label class="font-weight-bold">Kelurahan</label>
-                    <select class="form-control" name="kelurahan" id="kelurahan">
-                        <option value=""></option>
-                    </select>
-                </div>
             </div>
         </div>
         <hr />
@@ -117,32 +105,6 @@
                     cache: false,
                     success: function(msg) {
                         $("#kabupaten").html(msg);
-                    }
-                });
-            });
-    
-            $("#kabupaten").change(function(){
-            var kabupaten = $("#kabupaten").val();
-                $.ajax({
-                    type: 'POST',
-                    url: "get_kecamatan.php",
-                    data: {kabupaten: kabupaten},
-                    cache: false,
-                    success: function(msg) {
-                        $("#kecamatan").html(msg);
-                    }
-                });
-            });
-    
-            $("#kecamatan").change(function(){
-            var kecamatan = $("#kecamatan").val();
-                $.ajax({
-                    type: 'POST',
-                    url: "get_kelurahan.php",
-                    data: {kecamatan: kecamatan},
-                    cache: false,
-                    success: function(msg) {
-                        $("#kelurahan").html(msg);
                     }
                 });
             });
