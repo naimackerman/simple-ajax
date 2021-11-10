@@ -9,12 +9,62 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <style>
+        body{
+            background: -webkit-linear-gradient(left, #0072ff, #00c6ff);
+            font-family: sans-serif;
+            color: white;
+        }
+        body:after {
+            content:'';
+            background: url('./bg.jpg') no-repeat center center;
+            background-size: cover;
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index:-1;
+            opacity: 1;
+        }
+        h2 {
+            text-align: center;
+        }
+        button {
+            width: 100px;
+            margin: 20px;
+        }
+        .button-color {
+            margin: 1%;
+            background-color: #15F4EE;
+        }
+        .button-color:hover {
+            background-color: #03AECC;
+        }
+        .data{
+            margin-top: 5%;
+            border-radius: 1rem;
+            position: relative;
+            z-index: 1;
+            padding: 5%;
+            box-shadow: 0 0 24px 2px #47066e;
+        }
+        .data::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: .8;
+            z-index: -1;
+            border-radius: 1rem;
+            background-color:rgba(0, 0, 0, 1);
+        }
     </style>
 </head>
 <body>
     <button class="btn button-color" onclick="window.location.href='../'">Back</button>
 
-    <div class="container mb-5">
+    <div class="container mb-5 data">
         <h2>Pilih Daerah</h2> <hr/>
     
         <div class="row">

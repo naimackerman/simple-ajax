@@ -1,5 +1,5 @@
 <?php
-    define('HOST','localhost:8080');
+    define('HOST','localhost');
     define('USER','root');
     define('PASS','');
     define('DB1', 'filter_daerah');
